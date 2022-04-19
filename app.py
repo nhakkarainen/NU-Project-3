@@ -42,11 +42,11 @@ def one_bedroom():
     session = Session(engine)
     one_bedroom_result = session.query(Housing_Prices.CityName, Housing_Prices.State, Housing_Prices.NoOfBeds, Housing_Prices.Mar2018, Housing_Prices.Apr2018, Housing_Prices.May2018, Housing_Prices.Jun2018, Housing_Prices.Jul2018, Housing_Prices.Aug2018, Housing_Prices.Sep2018, Housing_Prices.Oct2018, Housing_Prices.Nov2018, Housing_Prices.Dec2018, Housing_Prices.Jan2019, Housing_Prices.Feb2019, Housing_Prices.Mar2019, Housing_Prices.Apr2019, Housing_Prices.May2019, Housing_Prices.Jun2019, Housing_Prices.Jul2019, Housing_Prices.Aug2019, Housing_Prices.Sep2019, Housing_Prices.Oct2019, Housing_Prices.Nov2019, Housing_Prices.Dec2019, Housing_Prices.Jan2020, Housing_Prices.Feb2020, Housing_Prices.Mar2020).filter(Housing_Prices.NoOfBeds == 1).all()
     session.close()
-    # Convert the query results to a dictionary using CityName as the key
+    # Convert the query results to a dictionary using Index as the key
     one_bedroom = []
     for CityName, State, NoOfBeds, Mar2018 in one_bedroom_result:
         one_bedroom_dict = {}
-        ##one_bedroom_dict["CityName"] = CityName
+        one_bedroom_dict["CityName"] = CityName
         one_bedroom_dict["State"] = State
         one_bedroom_dict["NoOfBeds"] = NoOfBeds
         one_bedroom_dict["Mar2018"] = Mar2018
