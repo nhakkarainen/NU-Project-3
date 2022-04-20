@@ -42,20 +42,20 @@ def Homepage():
 def one_bedroom():
     # Create our session from Python to the DB
     session = Session(engine)
-    one_bedroom_result = session.query(Housing_Prices.CityName, Housing_Prices.State, Housing_Prices.NoOfBeds, Housing_Prices.Mar2018, Housing_Prices.Apr2018, Housing_Prices.May2018, Housing_Prices.Jun2018, 
+    one_bedroom_result = session.query(Housing_Prices.cityname, Housing_Prices.State, Housing_Prices.noofbeds, Housing_Prices.Mar2018, Housing_Prices.Apr2018, Housing_Prices.May2018, Housing_Prices.Jun2018, 
     Housing_Prices.Jul2018, Housing_Prices.Aug2018, Housing_Prices.Sep2018, Housing_Prices.Oct2018, Housing_Prices.Nov2018, Housing_Prices.Dec2018, Housing_Prices.Jan2019, Housing_Prices.Feb2019, 
     Housing_Prices.Mar2019, Housing_Prices.Apr2019, Housing_Prices.May2019, Housing_Prices.Jun2019, Housing_Prices.Jul2019, Housing_Prices.Aug2019, Housing_Prices.Sep2019, Housing_Prices.Oct2019, 
     Housing_Prices.Nov2019, Housing_Prices.Dec2019, Housing_Prices.Jan2020, Housing_Prices.Feb2020, Housing_Prices.Mar2020).\
-    filter(Housing_Prices.NoOfBeds == 1).\
+    filter(Housing_Prices.noofbeds == 1).\
     all()
     session.close()
     # Convert the query results to a dictionary using CityName as the key
     one_bedroom = []
-    for CityName, State, NoOfBeds, Mar2018, Apr2018, May2018, Jun2018, Jul2018, Aug2018, Sep2018, Oct2018, Nov2018, Dec2018, Jan2019, Feb2019, Mar2019, Apr2019, May2019, Jun2019, Jul2019, Aug2019, Sep2019, Oct2019, Nov2019, Dec2019, Jan2020, Feb2020, Mar2020 in one_bedroom_result:
+    for cityname, State, noofbeds, Mar2018, Apr2018, May2018, Jun2018, Jul2018, Aug2018, Sep2018, Oct2018, Nov2018, Dec2018, Jan2019, Feb2019, Mar2019, Apr2019, May2019, Jun2019, Jul2019, Aug2019, Sep2019, Oct2019, Nov2019, Dec2019, Jan2020, Feb2020, Mar2020 in one_bedroom_result:
         one_bedroom_dict = {}
-        one_bedroom_dict["CityName"] = CityName
+        one_bedroom_dict["CityName"] = cityname
         one_bedroom_dict["State"] = State
-        one_bedroom_dict["NoOfBeds"] = NoOfBeds
+        one_bedroom_dict["NoOfBeds"] = noofbeds
         one_bedroom_dict["Mar2018"] = Mar2018
         one_bedroom_dict["Apr2018"] = Apr2018
         one_bedroom_dict["May2018"] = May2018
@@ -90,20 +90,20 @@ def one_bedroom():
 def two_bedroom():
     # Create our session from Python to the DB
     session = Session(engine)
-    two_bedroom_result = session.query(Housing_Prices.CityName, Housing_Prices.State, Housing_Prices.NoOfBeds, Housing_Prices.Mar2018, Housing_Prices.Apr2018, Housing_Prices.May2018, Housing_Prices.Jun2018, 
+    two_bedroom_result = session.query(Housing_Prices.cityname, Housing_Prices.State, Housing_Prices.noofbeds, Housing_Prices.Mar2018, Housing_Prices.Apr2018, Housing_Prices.May2018, Housing_Prices.Jun2018, 
     Housing_Prices.Jul2018, Housing_Prices.Aug2018, Housing_Prices.Sep2018, Housing_Prices.Oct2018, Housing_Prices.Nov2018, Housing_Prices.Dec2018, Housing_Prices.Jan2019, Housing_Prices.Feb2019, 
     Housing_Prices.Mar2019, Housing_Prices.Apr2019, Housing_Prices.May2019, Housing_Prices.Jun2019, Housing_Prices.Jul2019, Housing_Prices.Aug2019, Housing_Prices.Sep2019, Housing_Prices.Oct2019, 
     Housing_Prices.Nov2019, Housing_Prices.Dec2019, Housing_Prices.Jan2020, Housing_Prices.Feb2020, Housing_Prices.Mar2020).\
-    filter(Housing_Prices.NoOfBeds == 2).\
+    filter(Housing_Prices.noofbeds == 2).\
     all()
     session.close()
     # Convert the query results to a dictionary using CityName as the key
     two_bedroom = []
-    for CityName, State, NoOfBeds, Mar2018, Apr2018, May2018, Jun2018, Jul2018, Aug2018, Sep2018, Oct2018, Nov2018, Dec2018, Jan2019, Feb2019, Mar2019, Apr2019, May2019, Jun2019, Jul2019, Aug2019, Sep2019, Oct2019, Nov2019, Dec2019, Jan2020, Feb2020, Mar2020 in two_bedroom_result:
+    for cityname, State, noofbeds, Mar2018, Apr2018, May2018, Jun2018, Jul2018, Aug2018, Sep2018, Oct2018, Nov2018, Dec2018, Jan2019, Feb2019, Mar2019, Apr2019, May2019, Jun2019, Jul2019, Aug2019, Sep2019, Oct2019, Nov2019, Dec2019, Jan2020, Feb2020, Mar2020 in two_bedroom_result:
         two_bedroom_dict = {}
-        two_bedroom_dict["CityName"] = CityName
+        two_bedroom_dict["CityName"] = cityname
         two_bedroom_dict["State"] = State
-        two_bedroom_dict["NoOfBeds"] = NoOfBeds
+        two_bedroom_dict["NoOfBeds"] = noofbeds
         two_bedroom_dict["Mar2018"] = Mar2018
         two_bedroom_dict["Apr2018"] = Apr2018
         two_bedroom_dict["May2018"] = May2018
@@ -138,20 +138,20 @@ def two_bedroom():
 def three_bedroom():
     # Create our session from Python to the DB
     session = Session(engine)
-    three_bedroom_result = session.query(Housing_Prices.CityName, Housing_Prices.State, Housing_Prices.NoOfBeds, Housing_Prices.Mar2018, Housing_Prices.Apr2018, Housing_Prices.May2018, Housing_Prices.Jun2018, 
+    three_bedroom_result = session.query(Housing_Prices.cityname, Housing_Prices.State, Housing_Prices.noofbeds, Housing_Prices.Mar2018, Housing_Prices.Apr2018, Housing_Prices.May2018, Housing_Prices.Jun2018, 
     Housing_Prices.Jul2018, Housing_Prices.Aug2018, Housing_Prices.Sep2018, Housing_Prices.Oct2018, Housing_Prices.Nov2018, Housing_Prices.Dec2018, Housing_Prices.Jan2019, Housing_Prices.Feb2019, 
     Housing_Prices.Mar2019, Housing_Prices.Apr2019, Housing_Prices.May2019, Housing_Prices.Jun2019, Housing_Prices.Jul2019, Housing_Prices.Aug2019, Housing_Prices.Sep2019, Housing_Prices.Oct2019, 
     Housing_Prices.Nov2019, Housing_Prices.Dec2019, Housing_Prices.Jan2020, Housing_Prices.Feb2020, Housing_Prices.Mar2020).\
-    filter(Housing_Prices.NoOfBeds == 3).\
+    filter(Housing_Prices.noofbeds == 3).\
     all()
     session.close()
     # Convert the query results to a dictionary using CityName as the key
     three_bedroom = []
-    for CityName, State, NoOfBeds, Mar2018, Apr2018, May2018, Jun2018, Jul2018, Aug2018, Sep2018, Oct2018, Nov2018, Dec2018, Jan2019, Feb2019, Mar2019, Apr2019, May2019, Jun2019, Jul2019, Aug2019, Sep2019, Oct2019, Nov2019, Dec2019, Jan2020, Feb2020, Mar2020 in three_bedroom_result:
+    for cityname, State, noofbeds, Mar2018, Apr2018, May2018, Jun2018, Jul2018, Aug2018, Sep2018, Oct2018, Nov2018, Dec2018, Jan2019, Feb2019, Mar2019, Apr2019, May2019, Jun2019, Jul2019, Aug2019, Sep2019, Oct2019, Nov2019, Dec2019, Jan2020, Feb2020, Mar2020 in three_bedroom_result:
         three_bedroom_dict = {}
-        three_bedroom_dict["CityName"] = CityName
+        three_bedroom_dict["CityName"] = cityname
         three_bedroom_dict["State"] = State
-        three_bedroom_dict["NoOfBeds"] = NoOfBeds
+        three_bedroom_dict["NoOfBeds"] = noofbeds
         three_bedroom_dict["Mar2018"] = Mar2018
         three_bedroom_dict["Apr2018"] = Apr2018
         three_bedroom_dict["May2018"] = May2018
@@ -186,16 +186,16 @@ def three_bedroom():
 def days_listed():
     # Create our session from Python to the DB
     session = Session(engine)
-    days_listed_result = session.query(Days_On_Market.StateName, Days_On_Market.Feb2018, Days_On_Market.Mar2018, Days_On_Market.Apr2018, Days_On_Market.May2018, Days_On_Market.Jun2018, Days_On_Market.Jul2018,
+    days_listed_result = session.query(Days_On_Market.statename, Days_On_Market.Feb2018, Days_On_Market.Mar2018, Days_On_Market.Apr2018, Days_On_Market.May2018, Days_On_Market.Jun2018, Days_On_Market.Jul2018,
     Days_On_Market.Aug2018, Days_On_Market.Sep2018, Days_On_Market.Oct2018, Days_On_Market.Nov2018, Days_On_Market.Dec2018, Days_On_Market.Jan2019, Days_On_Market.Feb2019, Days_On_Market.Mar2019, 
     Days_On_Market.Apr2019, Days_On_Market.May2019, Days_On_Market.Jun2019, Days_On_Market.Jul2019, Days_On_Market.Aug2019, Days_On_Market.Sep2019, Days_On_Market.Oct2019, Days_On_Market.Nov2019, 
     Days_On_Market.Dec2019, Days_On_Market.Jan2020, Days_On_Market.Feb2020).all()
     session.close()
     # Convert the query results to a dictionary
     days_listed = []
-    for StateName, Feb2018, Mar2018, Apr2018, May2018, Jun2018, Jul2018, Aug2018, Sep2018, Oct2018, Nov2018, Dec2018, Jan2019, Feb2019, Mar2019, Apr2019, May2019, Jun2019, Jul2019, Aug2019, Sep2019, Oct2019, Nov2019, Dec2019, Jan2020, Feb2020 in days_listed_result:
+    for statename, Feb2018, Mar2018, Apr2018, May2018, Jun2018, Jul2018, Aug2018, Sep2018, Oct2018, Nov2018, Dec2018, Jan2019, Feb2019, Mar2019, Apr2019, May2019, Jun2019, Jul2019, Aug2019, Sep2019, Oct2019, Nov2019, Dec2019, Jan2020, Feb2020 in days_listed_result:
         days_listed_dict = {}
-        days_listed_dict["StateName"] = StateName
+        days_listed_dict["StateName"] = statename
         days_listed_dict["Feb2018"] = Feb2018
         days_listed_dict["Mar2018"] = Mar2018
         days_listed_dict["Apr2018"] = Apr2018
