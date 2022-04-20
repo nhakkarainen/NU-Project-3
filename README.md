@@ -1,4 +1,4 @@
-# NU-Project-3
+# NU-Project-3: Visualizing Data
 ## Project Description
 1. Your task is to tell a story using data visualizations.
 2. Focus on providing users an interactive means to explore data themselves.
