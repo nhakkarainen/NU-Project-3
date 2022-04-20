@@ -142,7 +142,7 @@ def three_bedroom():
     Housing_Prices.Jul2018, Housing_Prices.Aug2018, Housing_Prices.Sep2018, Housing_Prices.Oct2018, Housing_Prices.Nov2018, Housing_Prices.Dec2018, Housing_Prices.Jan2019, Housing_Prices.Feb2019, 
     Housing_Prices.Mar2019, Housing_Prices.Apr2019, Housing_Prices.May2019, Housing_Prices.Jun2019, Housing_Prices.Jul2019, Housing_Prices.Aug2019, Housing_Prices.Sep2019, Housing_Prices.Oct2019, 
     Housing_Prices.Nov2019, Housing_Prices.Dec2019, Housing_Prices.Jan2020, Housing_Prices.Feb2020, Housing_Prices.Mar2020).\
-    filter(Housing_Prices.NoOfBeds == 2).\
+    filter(Housing_Prices.NoOfBeds == 3).\
     all()
     session.close()
     # Convert the query results to a dictionary using CityName as the key
